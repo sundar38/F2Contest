@@ -111,7 +111,7 @@ function showdice() {
 
     let diceplace = document.querySelector("#dicesection")
     let diceimage = document.createElement("img")
-    diceimage.setAttribute("src", "./images/dice.jpg")
+    diceimage.setAttribute("src", "images/dice.jpg")
     diceimage.setAttribute("id", "dicedisplay")
     diceplace.appendChild(diceimage)
     // diceplace.addEventListener("click", rolldice)

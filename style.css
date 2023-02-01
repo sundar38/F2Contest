@@ -26,9 +26,10 @@
     position: absolute;
     left: 5px;
 } */
-#printvalusection{
+#printvaluesection{
     position: absolute;
     top: 300px;
+    left: 300px;
 }
 #formsection{
     position: absolute;
@@ -38,7 +39,7 @@
 #dicesection{
     position: absolute;
     top: 300px;
-    left: 325px;
+    left: 500px;
     color: red;
     font-size: 30px;
 }
@@ -47,6 +48,7 @@
     top: 275px;
     color: green;
     font-size: 30px;
+    left: 750px;
 }
 #lastsection img{
     width: 300px;

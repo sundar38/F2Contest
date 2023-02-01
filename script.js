@@ -9,10 +9,9 @@ let flagb = false
 let flagc = false
 let flagd = false
 
-// imagea.addEventListener("click", showform)
+
 imagea.onclick = showform
-// imageb.addEventListener("click", showuserdetails)
-// imagec.addEventListener("click", showdice)
+
 
 
 
@@ -118,22 +117,7 @@ function showform() {
 
 
 
-// function showdice() {
 
-//     // document.getElementById("dicedisplay").style["visibility"]="visible"
-//     if (flaga == true) {
-//         imageb.onclick = ""
-//     }
-//     console.log("2nd attempt");
-
-//     let diceplace = document.querySelector("#dicesection")
-//     let diceimage = document.createElement("img")
-//     diceimage.setAttribute("src", "images/dice.jpg")
-//     diceimage.setAttribute("id", "dicedisplay")
-//     diceplace.appendChild(diceimage)
-//     // diceplace.addEventListener("click", rolldice)
-//     diceplace.onclick = rolldice
-// }
 let textdisplay = document.getElementById("displaytext")
 let noofrolls = 0
 let score = 0
@@ -160,6 +144,8 @@ function rolldice() {
             let token = crypto.randomUUID()
             let randomtext = token.substring(0, 12)
             console.log(randomtext);
+            let coupondisplay=document.getElementById("coupon")
+            coupondisplay.innerHTML="Coupon is "+randomtext
             let finalimage = document.createElement("img")
             finalimage.setAttribute("src", "./images/congratulations.jpg")
             finaltext.appendChild(finalimage)
@@ -185,16 +171,3 @@ function rolldice() {
     }
 }
 
-function generaterandomnumber() {
-    imaged.onclick = ""
-    let finaltext = document.getElementById("lastsection")
-    let coupondisplay=document.getElementById("coupon")
-    // console.log("clicked image");
-    let token = crypto.randomUUID()
-    let randomtext = token.substring(0, 12)
-    console.log("Randomtext is",randomtext);
-    coupondisplay.innerHTML="Coupon is "+randomtext
-    let finalimage = document.createElement("img")
-    finalimage.setAttribute("src", "./images/congratulations.jpg")
-    finaltext.appendChild(finalimage)
-}

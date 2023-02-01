@@ -44,37 +44,49 @@ function showform(){
 
     form.appendChild(name)
     form.appendChild(br.cloneNode());
+    
     form.appendChild(email)
     form.appendChild(br.cloneNode());
     form.appendChild(username)
     form.appendChild(br.cloneNode());
+    
     form.appendChild(btn)
 
     document.getElementById("formsection").appendChild(form)
     flaga=true
     console.log(flaga);
-    // console.log("hi");
+  
     imagea.onclick=""
-    // form.addEventListener("submit", function(e) {
-    //     e.preventDefault();
-    //     console.log("hi");
-    //     let finalname=name.value
-    //     let finalusername=username.value
-    //     const data = new FormData(form);
-    //     for (const [name,username] of data) {
-    //       console.log(name, ":", username)
-    //     }
-    //   })
-    if(flaga==true){
-        console.log(" go to 2nd");
-        imageb.onclick=showuserdetails
+    btn.onclick=function(e){
+        e.preventDefault()
+        // console.log(name.value, email.value, username.value);
+        let obj={
+            user_name: name.value,
+            user_email: email.value,
+            user_username: username.value,
+        }
+        if(flaga==true){
+            console.log(" go to 2nd");
+            imageb.onclick=showuserdetails(obj)
+        }
     }
+    
       
 }
 
-function showuserdetails(){
+
+function showuserdetails(obj){
     flagb=true
     console.log("hi 2");
+    // console.log(obj.user_name," ", obj.user_username);
+    let printvalue=document.getElementById("printvaluesection")
+    let values0=document.createElement("span")
+    let values1=document.createElement("span")
+    values0.innerHTML="Name is ", obj.user_name;
+    values1.innerHTML="Username is ",obj.user_username
+    printvalue.appendChild(values0)
+    printvalue.appendChild(values1)
+
     if(flaga==true && flagb==true){
         console.log("click 3");
         imagec.onclick=showdice
@@ -90,7 +102,7 @@ function showdice(){
     
     let diceplace=document.querySelector("#dicesection")
     let diceimage=document.createElement("img")
-    diceimage.setAttribute("src", "/images/dice.jpg")
+    diceimage.setAttribute("src", "./images/dice.jpg")
     diceimage.setAttribute("id", "dicedisplay")
     diceplace.appendChild(diceimage)
     // diceplace.addEventListener("click", rolldice)
@@ -132,9 +144,11 @@ function rolldice(){
 function generaterandomnumber(){
     imaged.onclick=""
     let finaltext=document.getElementById("lastsection")
-    console.log("clicked image");
+    // console.log("clicked image");
     let token=crypto.randomUUID()
     let randomtext=token.substring(0,12)
     console.log(randomtext);
-    finaltext.innerHTML="Congratulations you won the game"
+    let finalimage= document.createElement("img")
+    finalimage.setAttribute("src","./images/congratulations.jpg")
+    finaltext.appendChild(finalimage)
 }

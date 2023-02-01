@@ -102,6 +102,11 @@ function showform() {
                         diceimage.setAttribute("src", "images/dice.jpg")
                         diceimage.setAttribute("id", "dicedisplay")
                         diceplace.appendChild(diceimage)
+                        flagc = true
+                        if (flagc == true) {
+                            imagec.onclick = ""
+                        }
+
                         // diceplace.addEventListener("click", rolldice)
                         diceplace.onclick = rolldice
                     }
@@ -124,6 +129,10 @@ let score = 0
 let noofattempts = 0
 let scoretodisplay = document.getElementById("displayscore")
 function rolldice() {
+    flagc = true
+    if (flagc == true) {
+        imagec.onclick = ""
+    }
 
     //document.getElementById("dicedisplay").style["visibility"]="visible"
     noofrolls++
@@ -144,8 +153,8 @@ function rolldice() {
             let token = crypto.randomUUID()
             let randomtext = token.substring(0, 12)
             console.log(randomtext);
-            let coupondisplay=document.getElementById("coupon")
-            coupondisplay.innerHTML="Coupon is "+randomtext
+            let coupondisplay = document.getElementById("coupon")
+            coupondisplay.innerHTML = "Coupon is " + randomtext
             let finalimage = document.createElement("img")
             finalimage.setAttribute("src", "./images/congratulations.jpg")
             finaltext.appendChild(finalimage)

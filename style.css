@@ -53,3 +53,7 @@
 #lastsection img{
     width: 300px;
 }
+#lastsection #coupon{
+    position: absolute;
+    
+}

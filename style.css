@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+.imagesection{
+    height: 217px;
+    width: 900px;
+    border: 1px solid black;
+    display: flex;
+    gap: 5px;
+    /* border: 10px; */
+    /* padding: 35px; */
+    position: absolute;
+    top: 52px;
+    left: 50px;
+    
+}
+.images{
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+    /* display: none; */
+}
+#formsection{
+    position: absolute;
+    top: 300px;
+}
+#dicesection{
+    position: absolute;
+    top: 300px;
+    left: 325px;
+    color: red;
+    font-size: 30px;
+}
+#lastsection{
+    position: absolute;
+    top: 275px;
+    color: green;
+    font-size: 30px;
+}

@@ -66,7 +66,12 @@ function showform() {
         }
         if (flaga == true) {
             console.log(" go to 2nd");
-            imageb.onclick = function () {
+            imageb.onclick = validaingsecondimage(form, obj)
+        }
+    }   
+} 
+
+        function validaingsecondimage(form, obj) {
                 form.style.display = "none"
                 flagb = true
                 console.log("hi 2");
@@ -74,19 +79,18 @@ function showform() {
 
                 let values0 = document.createElement("span")
                 let values1 = document.createElement("span")
-                let values2 = document.createElement("span")
-                let values3 = document.createElement("span")
+                // let values2 = document.createElement("span")
+                // let values3 = document.createElement("span")
                 // let values=document.getElementsByTagName("span")
-                values0.innerHTML = "Person name is "
-                values1.innerHTML = obj.user_name;
+                values0.innerHTML = "Person name is "+obj.user_name
+                //values1.innerHTML = obj.user_name;
                 var br = document.createElement("br")
-                values2.innerHTML = "Person username is "
-                values3.innerHTML = obj.user_username
+                values1.innerHTML = "Person username is "+obj.user_username
+             
                 printvalue.appendChild(values0)
-                printvalue.appendChild(values1)
                 printvalue.appendChild(br.cloneNode());
-                printvalue.appendChild(values2)
-                printvalue.appendChild(values3)
+                printvalue.appendChild(values1)
+               
 
                 if (flaga == true && flagb == true) {
                     console.log("click 3");
@@ -112,13 +116,13 @@ function showform() {
                     }
                     // printvalue.style.display="none"
                 }
-            }
+            
         }
-    }
+    
 
 
 
-}
+
 
 
 
